@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+    <title>Food For Fitness</title>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div id="branding-logo">
+                <h1><span class="highlight">Food</span> For Fitness</h1>
+            </div>
+            <nav>
+                <ul>
+                    <li class="current"><a href="#">home</a></li>
+                    <li><a href="#plans">services</a></li>
+                    <li><a href="#about">about</a></li>
+                    <li><a href="#footer">contact</a></li>
+                    <li class="get"><a href="#">get started</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <section id="show-case">
+        <div class="slideshow-container">
+
+            <div class="mySlides fade">
+                <img src="./images/slider-2.jpg" style="width:100%">
+                <div class="text">
+                    <h1>let's begin your<br> heathiest journey<br> together</h1>
+                    <p>let's begin | heathiest journey | together</p>
+                    <a href="#">get started now</a>
+                </div>
+            </div>
+            
+            <div class="mySlides fade">
+              <img src="./images/slider-1.jpg" style="width:100%">
+              <div class="text">
+                <h1>create a fit &<br> healthy body for<br> life</h1>
+                <p>fitness | heathy body | healthy living</p>
+                <a href="#">view our services</a>
+            </div>
+            </div>
+            
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+            
+        </div><br>      
+        <script>
+            var slideIndex = 1;
+            showSlides(slideIndex);
+            
+            function plusSlides(n) {
+                showSlides(slideIndex += n);
+            }
+            
+            function currentSlide(n) {
+                showSlides(slideIndex = n);
+            }
+            
+            function showSlides(n) {
+                var i;
+                var slides = document.getElementsByClassName("mySlides");
+                var dots = document.getElementsByClassName("dot");
+                if (n > slides.length) {slideIndex = 1}    
+                if (n < 1) {slideIndex = slides.length}
+                for (i = 0; i < slides.length; i++) {
+                    slides[i].style.display = "none";  
+                }
+                for (i = 0; i < dots.length; i++) {
+                    dots[i].className = dots[i].className.replace(" active", "");
+                }
+                slides[slideIndex-1].style.display = "block";  
+                dots[slideIndex-1].className += " active";
+                setTimeout(showSlides, 2000);
+            }
+        </script>       
+    </section>
+    <section id="plans">
+        <div class="top-title">
+            <h1>Specialize in weight management programmes</h1>
+            <p>Specialised advice to assist you in reaching your weight goals.</p>
+        </div>
+        <div class="container-top">
+            <div class="service-container">
+                <img src="./images/service-2.jpg" alt="service image"><br>
+                <div class="diet-plans">    
+                    <a href="#">DIET PLANS</a>
+                    <p>Whether your goal is to lose fat, gain muscle or just get to a healthy lifestyle by cutting the junk foods, 
+                        we are here to cater to your needs. You can choose to subscribe to our weekly meal plans,
+                        or pick meals from our À la carte menu and have them delivered to you.
+                    </p>
+                    <a href="#" style="font-size: 15px;">GET STARTED</a>
+                </div>
+            </div>
+            <div class="service-container">
+                <img src="./images/service-1.jpg" alt="service image">
+                <div class="diet-plans">    
+                    <a href="#">NUTRITION COUNSELING</a>
+                    <p>Book a counseling session to help you decide your diet plan based on where you are at,
+                        and where you want to be in the near future. It is free for the first 100 clients, 
+                        so don't miss out on the opportunity to get your nutrition in check.
+                    </p>
+                    <a href="#" style="font-size: 15px;">BOOK COUNSELLING SESSION</a>
+                </div>
+            </div>
+        </div>
+    </section>    
+    <div class="diet-plan-container">
+        <div class="top-title">
+            <h1>DIET PLANS</h1>
+            <p>Please contact us to explore the possibilities fo customised meal plans.</p>
+        </div>
+        <div class="plans-2">
+            <div class="weekly-plan-container">
+                <h2>Weekly Plan</h2>
+                <ul>
+                    <li>Goal based and personalised meal plans</li>
+                    <li>Swap to suit your taste and lifestyle</li>
+                    <li>Nutritional data to support calorie counting</li>
+                    <li>New recipes added every month</li>
+                </ul>
+                <a href="#" class="bt">start your jorney now</a>
+            </div>
+            <div class="weekly-plan-container">
+                <h2>food order</h2>
+                <ul>
+                    <li>Choose among meals available from daily menu</li>
+                    <li>Contact us for customisations if required</li>
+                    <li>Nutritional data to support calorie counting</li>
+                    <li>Delivered to your home / office address</li>
+                </ul>
+                <a href="#" class="bt">order food now</a>
+            </div>
+        </div>   
+    </div>
+    <div id="about">    
+        <div class="top-title1">
+            <h1>Latest News & Diet Tips</h1>
+        </div>
+        <div class="news-tips">
+            
+            <div class="container-top1">
+                <div class="service-container1">
+                    <img src="./images/post-img-small-1.jpg" class="sc-img"><br>
+                    <a href="#" class="sc">diet tips</a><br><br>
+                    <a href="#">the world of dieting</a>
+                    <p>There are so many dietary plans, each focused on attaining certain goals.
+                        Some diets are undertaken for losing weight,
+                        while some are undertaken for gaining muscle weight, some for lowering cholesterol,
+                        the others for living a long and healthy life.
+                    </p>
+                    <a href="#" class="sc">read more</a>
+                </div>
+                <div class="service-container1">
+                    <img src="./images/post-img-small-2.jpg" class="sc-img"><br>
+                    <a href="#" class="sc">weight loss</a><br><br>
+                    <a href="#">the power of salads</a>
+                    <p>With an increase in cases of health epidemics such as obesity and heart diseases, 
+                        people are beginning to realize the importance of adding healthy and nutritious items to their daily diet,
+                        like a good nutrient rich salad. 
+                    </p>
+                    <a href="#" class="sc">read more</a>
+                </div>
+                <div class="service-container1">
+                    <img src="./images/post-img-small-3.jpg" class="sc-img"><br>
+                    <a href="#" class="sc">health care</a><br><br>
+                    <a href="#">inflammation fighting foods</a>
+                    <p>Inflammation can be both good and bad. On one hand, it helps your body defend itself from infection and injury.
+                        On the other hand, chronic inflammation can lead to weight gain and disease. 
+                        However, studies demonstrate that some foods can fight inflammation.
+                    </p>
+                    <a href="#" class="sc">read more</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer id="footer">
+        <div class="contact-info">
+            <h3 class="footer-title">contact information</h3>
+            <div class="info">
+                <ul>
+                    <li> <i class="icon-placeholder"></i>Mysore, KA 570011</li>
+                    <li><i class="icon-phone-call"></i>+91 935-330-6268</li>
+                    <li><i class="icon-envelope"></i>food4fitness@gmail.com</li>
+                </ul>
+            </div>
+            
+        </div>
+    </footer>
+</body>
+</html>
